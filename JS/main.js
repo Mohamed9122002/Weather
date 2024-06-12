@@ -38,7 +38,7 @@ document.querySelector(".btnClicked").addEventListener("click", function(event) 
 // function get weather todays
 async function getSearchWeather(value) {
   let req = await fetch(
-    `${api.baseUrl}/  ${api.endpoint}?key=${api.apiKey}&q=${value}&days=${api.day}`
+    `${api.baseUrl}/${api.endpoint}?key=${api.apiKey}&q=${value}&days=${api.day}`
   );
   console.log(req);
   if (req.ok && req.status !== 400) {
